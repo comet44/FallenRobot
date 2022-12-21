@@ -73,10 +73,10 @@ async def delete_messages(event):
 
 __help__ = """
  ❍ /del*:* deletes the message you replied to
- ❍ /purge*:* deletes all messages between this and the replied to message.
+ ❍ /spurge*:* deletes all messages between this and the replied to message.
 """
 
-PURGE_HANDLER = purge_messages, events.NewMessage(pattern="^[!/]purge$")
+PURGE_HANDLER = purge_messages, events.NewMessage(pattern="^[!/]spurge$")
 DEL_HANDLER = delete_messages, events.NewMessage(pattern="^[!/]del$")
 
 telethn.add_event_handler(*PURGE_HANDLER)
